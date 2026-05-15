@@ -14,17 +14,17 @@ export default function StoryPage() {
         <div style={s.eyebrow}>Our Story</div>
         <h1 style={s.heroTitle}>From the ground up.</h1>
         <p style={s.heroSub}>
-          Commit &amp; Conquer started with a simple belief: clothing should work as hard as you do.
-          No logos screaming for attention, no fast-fashion compromise — just thoughtful garments
-          built to last.
+          It all began in a small workshop where we tore apart standard issue apparel to see why it failed so quickly.
+          We realized that by cutting corners, the industry had forgotten what it meant to build something durable.
+          Our mission became clear: engineer garments that withstand the test of time and look better with every wear
         </p>
       </section>
 
       <div style={s.cards}>
         {[
-          { icon: "◈", title: "No excess", body: "Every detail earns its place. If it doesn't serve a function or improve the garment, we cut it." },
-          { icon: "⬡", title: "Durable by design", body: "Garment-dyed, pre-washed, and stress-tested. Our pieces are built to look better with age." },
-          { icon: "○", title: "Transparent pricing", body: "We show you exactly what you're paying for. No artificial markups, no fake 'sale' prices." },
+          { icon: "◈", title: "Radical Utility", body: "We get rid of the noise. A seam that doesn’t reinforce a stress point or a pocket that serves a purpose doesn’t make the cut." },
+          { icon: "⬡", title: "Built to Last", body: "This is armor for the daily grind. We use heavyweight cotton and construction techniques borrowed from military gear." },
+          { icon: "○", title: "Radical Transparency", body: "You deserve to know what you’re paying for. We break down the cost of every garment so you know exactly where your money goes." },
         ].map((c) => (
           <div key={c.title} className="au-card" style={s.card}>
             <div style={s.cardIcon}>{c.icon}</div>
@@ -34,15 +34,6 @@ export default function StoryPage() {
         ))}
       </div>
 
-      <section style={s.section}>
-        <h2 style={s.sectionTitle}>The Journey</h2>
-        <p style={s.sectionBody}>
-          It all began in a small workshop where we tore apart standard issue apparel to see why it failed so quickly. 
-          We realized that by cutting corners, the industry had forgotten what it meant to build something durable.
-          Our mission became clear: engineer garments that withstand the test of time and look better with every wear.
-        </p>
-      </section>
-
       <div style={{ textAlign: "center", marginTop: 60 }}>
         <Link to="/" style={s.cta}>Shop the Collection →</Link>
       </div>
@@ -51,18 +42,18 @@ export default function StoryPage() {
 }
 
 const s: Record<string, any> = {
-  page:       { maxWidth: 900, margin: "0 auto", padding: "60px 24px 100px" },
-  hero:       { textAlign: "center", marginBottom: 80 },
-  eyebrow:    { fontSize: 12, fontWeight: 700, letterSpacing: 2, color: "#7c6aff", textTransform: "uppercase", marginBottom: 20 },
-  heroTitle:  { fontSize: "clamp(36px,6vw,64px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 24 },
-  heroSub:    { fontSize: 18, color: "#aaa", lineHeight: 1.8, maxWidth: 600, margin: "0 auto" },
-  cards:      { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 24, marginBottom: 80 },
-  card:       { background: "#141417", border: "1px solid #2a2a31", borderRadius: 16, padding: 32 },
-  cardIcon:   { fontSize: 28, marginBottom: 16, color: "#7c6aff" },
-  cardTitle:  { fontSize: 18, fontWeight: 700, marginBottom: 10 },
-  cardBody:   { color: "#aaa", lineHeight: 1.7, fontSize: 15 },
-  section:    { borderTop: "1px solid #1c1c21", paddingTop: 60, marginBottom: 60 },
+  page: { maxWidth: 900, margin: "0 auto", padding: "60px 24px 100px" },
+  hero: { textAlign: "center", marginBottom: 80 },
+  eyebrow: { fontSize: 12, fontWeight: 700, letterSpacing: 2, color: "#7c6aff", textTransform: "uppercase", marginBottom: 20 },
+  heroTitle: { fontSize: "clamp(36px,6vw,64px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 24 },
+  heroSub: { fontSize: 18, color: "#aaa", lineHeight: 1.8, maxWidth: 600, margin: "0 auto" },
+  cards: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 24, marginBottom: 80 },
+  card: { background: "#141417", border: "1px solid #2a2a31", borderRadius: 16, padding: 32 },
+  cardIcon: { fontSize: 28, marginBottom: 16, color: "#7c6aff" },
+  cardTitle: { fontSize: 18, fontWeight: 700, marginBottom: 10 },
+  cardBody: { color: "#aaa", lineHeight: 1.7, fontSize: 15 },
+  section: { borderTop: "1px solid #1c1c21", paddingTop: 60, marginBottom: 60 },
   sectionTitle: { fontSize: 28, fontWeight: 800, marginBottom: 20 },
-  sectionBody:  { color: "#aaa", lineHeight: 1.8, fontSize: 16, maxWidth: 680 },
-  cta:        { display: "inline-block", padding: "16px 40px", background: "#7c6aff", color: "#fff", textDecoration: "none", borderRadius: 12, fontWeight: 700, fontSize: 16 },
+  sectionBody: { color: "#aaa", lineHeight: 1.8, fontSize: 16, maxWidth: 680 },
+  cta: { display: "inline-block", padding: "16px 40px", background: "#7c6aff", color: "#fff", textDecoration: "none", borderRadius: 12, fontWeight: 700, fontSize: 16 },
 };
