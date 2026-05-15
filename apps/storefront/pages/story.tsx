@@ -20,6 +20,20 @@ export default function StoryPage() {
         </p>
       </section>
 
+      <div style={s.cards}>
+        {[
+          { icon: "◈", title: "No excess", body: "Every detail earns its place. If it doesn't serve a function or improve the garment, we cut it." },
+          { icon: "⬡", title: "Durable by design", body: "Garment-dyed, pre-washed, and stress-tested. Our pieces are built to look better with age." },
+          { icon: "○", title: "Transparent pricing", body: "We show you exactly what you're paying for. No artificial markups, no fake 'sale' prices." },
+        ].map((c) => (
+          <div key={c.title} className="au-card" style={s.card}>
+            <div style={s.cardIcon}>{c.icon}</div>
+            <h3 style={s.cardTitle}>{c.title}</h3>
+            <p style={s.cardBody}>{c.body}</p>
+          </div>
+        ))}
+      </div>
+
       <section style={s.section}>
         <h2 style={s.sectionTitle}>The Journey</h2>
         <p style={s.sectionBody}>
@@ -42,6 +56,11 @@ const s: Record<string, any> = {
   eyebrow:    { fontSize: 12, fontWeight: 700, letterSpacing: 2, color: "#7c6aff", textTransform: "uppercase", marginBottom: 20 },
   heroTitle:  { fontSize: "clamp(36px,6vw,64px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 24 },
   heroSub:    { fontSize: 18, color: "#aaa", lineHeight: 1.8, maxWidth: 600, margin: "0 auto" },
+  cards:      { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 24, marginBottom: 80 },
+  card:       { background: "#141417", border: "1px solid #2a2a31", borderRadius: 16, padding: 32 },
+  cardIcon:   { fontSize: 28, marginBottom: 16, color: "#7c6aff" },
+  cardTitle:  { fontSize: 18, fontWeight: 700, marginBottom: 10 },
+  cardBody:   { color: "#aaa", lineHeight: 1.7, fontSize: 15 },
   section:    { borderTop: "1px solid #1c1c21", paddingTop: 60, marginBottom: 60 },
   sectionTitle: { fontSize: 28, fontWeight: 800, marginBottom: 20 },
   sectionBody:  { color: "#aaa", lineHeight: 1.8, fontSize: 16, maxWidth: 680 },
