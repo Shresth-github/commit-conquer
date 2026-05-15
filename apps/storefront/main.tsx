@@ -12,6 +12,7 @@ const CheckoutPage = lazy(() => import("./pages/CheckoutForm"));
 const ProductDetail = lazy(() => import("./pages/product-detail"));
 const CollectionsPage = lazy(() => import("./pages/collections"));
 const AboutPage = lazy(() => import("./pages/about"));
+const StoryPage = lazy(() => import("./pages/story"));
 const AccountPage = lazy(() => import("./pages/account"));
 
 
@@ -59,6 +60,7 @@ createRoot(rootEl).render(
                 element={<CollectionsPage />}
               />
               <Route path="/about" element={<AboutPage />} />
+              <Route path="/story" element={<StoryPage />} />
               <Route path="/account" element={<AccountPage />} />
             </Route>
 

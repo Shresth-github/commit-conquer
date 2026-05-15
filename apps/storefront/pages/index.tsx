@@ -665,7 +665,7 @@ export default function StorefrontPage() {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </a>
-          <a href="/about" className="btn-cta-ghost">Our Story</a>
+          <a href="/story" className="btn-cta-ghost">Our Story</a>
         </div>
       </section>
 
